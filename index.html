@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoPrime - Stand de Carros</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+}
+
+/* HEADER */
+header {
+    background: #111;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* CONTAINER */
+.container {
+    padding: 40px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.car-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 15px;
+}
+
+.car-info p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #111;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>AutoPrime</h1>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Carros</a>
+        <a href="#">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Encontra o teu carro de sonho 🚗</h2>
+</section>
+
+<div class="container">
+
+<!-- CARROS -->
+<div class="cars">
+
+    <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e">
+        <div class="car-info">
+            <h3>BMW Série 1</h3>
+            <p>📌 BMW</p>
+            <p>🚗 Série 1</p>
+            <p>⛽ Diesel</p>
+            <p>🛣️ 85.000 km</p>
+            <p>⛽ 50L</p>
+            <p>📅 2018</p>
+            <p class="price">16.900€</p>
+            <button>Ver detalhes</button>
+        </div>
+    </div>
+
+    <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+        <div class="car-info">
+            <h3>Audi A3</h3>
+            <p>📌 Audi</p>
+            <p>🚗 A3</p>
+            <p>⛽ Gasolina</p>
+            <p>🛣️ 62.000 km</p>
+            <p>⛽ 55L</p>
+            <p>📅 2019</p>
+            <p class="price">19.750€</p>
+            <button>Ver detalhes</button>
+        </div>
+    </div>
+
+    <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1542362567-b07e54358753">
+        <div class="car-info">
+            <h3>Mercedes A-Class</h3>
+            <p>📌 Mercedes</p>
+            <p>🚗 Classe A</p>
+            <p>⛽ Híbrido</p>
+            <p>🛣️ 40.500 km</p>
+            <p>⛽ 45L</p>
+            <p>📅 2020</p>
+            <p class="price">28.500€</p>
+            <button>Ver detalhes</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- HORÁRIO -->
+<div class="card">
+    <h2>Horário da Loja</h2>
+    <p>Segunda - Sexta: 09:00 - 19:00</p>
+    <p>Sábado: 10:00 - 18:00</p>
+    <p>Domingo: Encerrado</p>
+</div>
+
+<!-- CONTACTOS -->
+<div class="card">
+    <h2>Contactos & Localização</h2>
+    <p>📞 926 263 413</p>
+    <p>📍 Alpiarça, Santarém</p>
+</div>
+
+<!-- FINANCIAMENTO -->
+<div class="card">
+    <h2>Financiamento</h2>
+
+    <label>Preço (€)</label>
+    <input type="number" id="preco">
+
+    <label>Anos</label>
+    <select id="anos">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="10">10</option>
+    </select>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <h3 id="resultado"></h3>
+</div>
+
+</div>
+
+<footer>
+    © 2026 AutoPrime
+</footer>
+
+<script>
+function calcular() {
+    let preco = document.getElementById("preco").value;
+    let anos = document.getElementById("anos").value;
+
+    let meses = anos * 12;
+    let valor = preco / meses;
+
+    document.getElementById("resultado").innerText =
+        "Prestação: " + valor.toFixed(2) + "€ / mês";
+}
+</script>
+
+</body>
+</html>
